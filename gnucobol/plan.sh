@@ -1,11 +1,9 @@
 pkg_name=gnucobol
 pkg_origin=moutons
 pkg_version="3.0-rc1"
-pkg_maintainer="The Habitat Maintainers <humans@habitat.sh>"
+pkg_maintainer="Shaun Mouton <sdmouton@devops.christmas>"
 pkg_license=("Apache-2.0")
 pkg_source="http://sourceforge.net/projects/open-cobol/files/gnu-cobol/3.0/${pkg_name}-${pkg_version}.tar.gz"
-#pkg_source="//sourceforge.net/projects/open-cobol/files/gnu-cobol/3.0/gnucobol-3.0-rc1.tar.gz"
-#
 # pkg_filename="${pkg_name}-${pkg_version}.tar.gz"
 pkg_shasum="e55aeea6b1f77e763b4cd4b520c78eb06da7671b4dcc76463fd0237dbf2e4816"
 pkg_deps=(
@@ -41,8 +39,14 @@ pkg_bin_dirs=(bin)
 # pkg_interpreters=(bin/bash)
 # pkg_svc_user="hab"
 # pkg_svc_group="$pkg_svc_user"
-# pkg_description="Some description."
-# pkg_upstream_url="http://example.com/project-name"
+pkg_description="GnuCOBOL (formerly OpenCOBOL) is a free COBOL compiler. \
+  cobc translates COBOL source to executable using intermediate C, designated \
+  C compiler and linker. \
+  OpenCOBOL 1.1 became GNU Cobol 1.1 in 2013. \
+  GnuCOBOL 2.2 is the latest, version 3.0 is on its way. \
+  A programmer's guide, by Gary Cutler and Vincent Coen, is indexed at \
+  https://open-cobol.sourceforge.io together with more documentation."
+pkg_upstream_url="https://sourceforge.net/projects/open-cobol/"
 
 do_build() {
     ./configure --prefix="${pkg_prefix}" \
