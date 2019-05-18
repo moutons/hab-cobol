@@ -7,13 +7,14 @@ pkg_source="http://sourceforge.net/projects/open-cobol/files/gnu-cobol/3.0/${pkg
 # pkg_filename="${pkg_name}-${pkg_version}.tar.gz"
 pkg_shasum="e55aeea6b1f77e763b4cd4b520c78eb06da7671b4dcc76463fd0237dbf2e4816"
 pkg_deps=(
+    core/coreutils
     core/db
+    core/diffutils
     core/glibc
     core/gmp
+    core/ncurses
 )
 pkg_build_deps=(
-    core/coreutils
-    core/diffutils
     core/make
     core/gcc
     core/m4
